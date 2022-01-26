@@ -1,0 +1,72 @@
+{
+    "name": "vue2-template",
+    "version": "0.1.0",
+    "description": "The template for vue2 applications",
+    "main": "main.js",
+    "engineStrict": true,
+    "engines": {
+        "node": "^16.13.0",
+        "npm": "^8.1.0"
+    },
+    "scripts": {
+        "build": "cross-env NODE_ENV=production node --require @babel/register \"scripts/webpack/build.js\"",
+        "start": "cross-env NODE_ENV=development node --require @babel/register \"scripts/webpack/dev_server.js\"",
+        "serve": "serve \"./dist\" -s",
+        "check": "webpack-bundle-analyzer \"./dist/stats.json\"",
+        "lint": "npm run lint:css && npm run lint:js",
+        "lint:js": "eslint --ext .js,.vue --fix",
+        "lint:css": "stylelint \"./src/**/*.{css,sass,scss,vue}\" --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AntonMorozov1986/vue2-template.git"
+    },
+    "author": "Anton Morozov",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/AntonMorozov1986/vue2-template/issues"
+    },
+    "homepage": "https://github.com/AntonMorozov1986/vue2-template#readme",
+    "dependencies": {
+        "core-js": "^3.20.0",
+        "vue": "^2.6.14",
+        "vue-router": "^3.5.3",
+        "vuex": "^3.6.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
+        "@babel/register": "^7.16.0",
+        "app-root-path": "^3.0.0",
+        "babel-loader": "^8.2.3",
+        "babel-plugin-dynamic-import-node": "^2.3.3",
+        "clean-webpack-plugin": "^4.0.0",
+        "compression-webpack-plugin": "^9.0.1",
+        "cross-env": "^7.0.3",
+        "css-loader": "^6.5.1",
+        "css-minimizer-webpack-plugin": "^3.3.0",
+        "dotenv": "^10.0.0",
+        "eslint": "^8.3.0",
+        "eslint-plugin-vue": "^8.1.1",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.4.5",
+        "node-sass": "^6.0.1",
+        "progress-bar-webpack-plugin": "^2.1.0",
+        "sass-loader": "^12.3.0",
+        "serve": "^13.0.2",
+        "style-loader": "^3.3.1",
+        "stylelint": "^14.1.0",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-recommended-scss": "^5.0.2",
+        "stylelint-config-recommended-vue": "^1.1.0",
+        "stylelint-order": "^5.0.0",
+        "stylelint-scss": "^4.0.0",
+        "terser-webpack-plugin": "^5.2.5",
+        "vue-loader": "^15.9.8",
+        "vue-template-compiler": "^2.6.14",
+        "webpack": "^5.64.4",
+        "webpack-bundle-analyzer": "^4.5.0",
+        "webpack-dev-server": "^4.6.0",
+        "webpack-merge": "^5.8.0"
+    }
+}
